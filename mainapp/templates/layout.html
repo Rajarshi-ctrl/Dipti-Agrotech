@@ -290,87 +290,10 @@
             background: #249f16;
         }
 
-        .badge {
-  position: relative;
-  margin: 1.5em 3em;
-  width: 4em;
-  height: 6.2em;
-  border-radius: 10px;
-  display: inline-block;
-  top: 0;
-  transition: all 0.2s ease;
-}
-.badge:before, .badge:after {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
-  background: inherit;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-.badge:before {
-  transform: rotate(60deg);
-}
-.badge:after {
-  transform: rotate(-60deg);
-}
-.badge:hover {
-  top: -4px;
-}
-.badge .circle {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  background: #fff;
-  z-index: 10;
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-.badge .circle i.fa {
-  font-size: 2em;
-  margin-top: 8px;
-}
-.badge .font {
-  display: inline-block;
-  margin-top: 1em;
-}
-.badge .ribbon {
-  position: absolute;
-  border-radius: 4px;
-  padding: 5px 5px 4px;
-  width: 100px;
-  z-index: 11;
-  color: #fff;
-  bottom: 12px;
-  left: 50%;
-  margin-left: -55px;
-  height: 15px;
-  font-size: 14px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-  background: linear-gradient(to bottom right, #555 0%, #333 100%);
-  cursor: default;
-}
-
-.gold {
-  background: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
-  color: #b7892b;
-}
-
-.foot{
-    padding: 40px 0 20px;
-    background: linear-gradient(rgba(255, 255, 255, 0),#2424248f), url("{% static 'foot2.jpg' %}");
-}
+        .foot{
+            padding: 40px 0 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0),#2424248f), url("{% static 'footer.jpg' %}");
+        }
 
     </style>
 
@@ -423,12 +346,6 @@
                                 <a class="nav-link" href="/detail">Details</a>
                             </li>
 
-                            <!-- <li class="nav-item">
-                                <div class="badge gold">
-                                    <div class="circle"> <i class="fa fa-info-circle"></i></div>
-                                    <div class="ribbon">Details</div>
-                                </div>
-                            </li> -->
                         </ul>
                     </div>
                 </nav>
@@ -481,7 +398,7 @@
                                 </div>
                             </div> <br> <br>
                             <div class="col-md-5 footer-col">
-                                <div class="footer_detail">
+                                <div class="footer_detail" style="padding-top: 25px; padding-left: 0;">
                                     <a href="/home" class="footer-logo">
                                         <b style="font-size: 16px; color: #02cb02;">Dipti Agrotech</b>
                                     </a><br>

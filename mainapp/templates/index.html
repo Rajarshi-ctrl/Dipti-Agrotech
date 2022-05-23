@@ -48,7 +48,7 @@
     }
 
     .text h2 {
-        font-size: 5em;
+        font-size: 4em;
         font-weight: 800;
         color: #fff;
         line-height: 1em;
@@ -56,7 +56,7 @@
     }
 
     .text h3 {
-        font-size: 4em;
+        font-size: 2em;
         font-weight: 700;
         color: #fff;
         line-height: 1em;
@@ -64,7 +64,7 @@
     }
 
     .text p {
-        font-size: 1.1em;
+        font-size: 1em;
         color: #fff;
         margin: 20px 0;
         font-weight: 400;
@@ -256,7 +256,7 @@
 
     .welcome{
         padding: 40px;
-        display: flex;
+        /* display: flex; */
     }
 
     .button1 {
@@ -307,7 +307,7 @@
 {% block body %}
 
 <section class="showcase">
-    <video src="{% static 'vid1.mp4' %}" muted loop autoplay></video>
+    <video src="{% static 'vid.mp4' %}" muted loop autoplay></video>
     <div class="overlay"></div>
     <div class="text">
         <h2>Dipti </h2>
@@ -321,7 +321,10 @@
 </section>
 
 <div class="welcome">
-    <div style="padding-top: 60px;">
+    <div style="float: right;">
+        <img style="width: 400px;" src="{% static 'welcome.jpg' %}">
+    </div>
+    <div style="padding-top: 50px;">
         <h2><b>Welcome</b></h2> <br>
         <p>Dear guest,</p>  <p>    We are so happy to have you in our Dipti Agro family,  welcome to our Bio-Technological world. The platform for sale and sustainable innovation in the agri food sector.
             <br> <br> We are providing bio Agro medicine to create a new revolution in agriculture inputs and systems!</p>
@@ -329,9 +332,7 @@
             <button class="button1" style="vertical-align:middle"><span>Wanna Join with Us? </span></button>
         </a>
     </div>
-    <div>
-        <img style="width: 400px;" src="{% static 'welcome.jpg' %}">
-    </div>
+    
 </div>
 
 {% endblock %}
