@@ -1,0 +1,294 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block style %}
+
+<style>
+    .contact {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .contact .info {
+        padding: 30px;
+        background: #fff;
+        width: 100%;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .contact .info i {
+        font-size: 20px;
+        color: #149ddd;
+        float: left;
+        width: 44px;
+        height: 44px;
+        background: #dff3fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .contact .info h4 {
+        padding: 0 0 0 60px;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #050d18;
+    }
+
+    .contact .info p {
+        padding: 0 0 10px 60px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #173b6c;
+    }
+
+    .contact .info .email p {
+        padding-top: 5px;
+    }
+
+    .contact .info .social-links {
+        padding-left: 60px;
+    }
+
+    .contact .info .social-links a {
+        font-size: 18px;
+        display: inline-block;
+        background: #333;
+        color: #fff;
+        line-height: 1;
+        padding: 8px 0;
+        border-radius: 50%;
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        transition: 0.3s;
+        margin-right: 10px;
+    }
+
+    .contact .info .social-links a:hover {
+        background: #149ddd;
+        color: #fff;
+    }
+
+    .contact .info .email:hover i,
+    .contact .info .address:hover i,
+    .contact .info .phone:hover i {
+        background: #149ddd;
+        color: #fff;
+    }
+
+    .contact .django-email-form {
+        width: 100%;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .contact .django-email-form .form-group {
+        padding-bottom: 8px;
+    }
+
+    .contact .django-email-form .validate {
+        display: none;
+        color: red;
+        margin: 0 0 15px 0;
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+    .contact .php-email-form .error-message {
+        display: none;
+        color: #fff;
+        background: #ed3c0d;
+        text-align: left;
+        padding: 15px;
+        font-weight: 600;
+    }
+
+    .contact .php-email-form .error-message br+br {
+        margin-top: 25px;
+    }
+
+    .contact .php-email-form .sent-message {
+        display: none;
+        color: #fff;
+        background: #18d26e;
+        text-align: center;
+        padding: 15px;
+        font-weight: 600;
+    }
+
+    .contact .php-email-form .loading {
+        display: none;
+        background: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .contact .php-email-form .loading:before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin: 0 10px -6px 0;
+        border: 3px solid #18d26e;
+        border-top-color: #eee;
+        -webkit-animation: animate-loading 1s linear infinite;
+        animation: animate-loading 1s linear infinite;
+    }
+
+    .contact .django-email-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .contact .django-email-form label {
+        padding-bottom: 8px;
+    }
+
+    .contact .django-email-form input,
+    .contact .django-email-form textarea {
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 14px;
+    }
+
+    .contact .django-email-form input {
+        height: 44px;
+    }
+
+    .contact .django-email-form textarea {
+        padding: 10px 15px;
+    }
+
+    .contact .django-email-form button[type=submit] {
+        background: #149ddd;
+        border: 0;
+        padding: 10px 24px;
+        color: #fff;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+
+    .contact .django-email-form button[type=submit]:hover {
+        background: #37b3ed;
+    }
+
+    @-webkit-keyframes animate-loading {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes animate-loading {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert {{ message.tags }}" role="alert">
+  <strong>{{ message.tags }}</strong> {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-title">
+            <h2><b>Contact</b></h2> <br>
+            <p>Email for any query or call us directly. We should be happy to answer your questions or set up a meeting
+                with you. Or leave a message down here for us. </p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+            <div class="col-lg-5 d-flex align-items-stretch">
+                <div class="info">
+                    <div class="address">
+                        <i class="fa fa-map-marker"></i>
+                        <h4>Location:</h4>
+                        <p>Natagarh, Sodepur, Kolkata-700113</p>
+                    </div>
+
+                    <div class="email">
+                        <i class="fa fa-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>diptiagrotech@gmail.com</p>
+                    </div>
+
+                    <div class="phone">
+                        <i class="fa fa-phone"></i>
+                        <h4>Call:</h4>
+                        <p>+91 8777461794</p>
+                    </div>
+                    <!-- <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d467.81912281660965!2d88.3967832635052!3d22.702546079879877!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89c01357205db%3A0x18c6d97b598f07a8!2sPanchbati%2C%20Sodepur%2C%20Kolkata%2C%20West%20Bengal%20700110!5e0!3m2!1sen!2sin!4v1652039188647!5m2!1sen!2sin"
+                        style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.68886910372!2d88.39493971496194!3d22.70262338511598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d0773ab03e9%3A0x19cdd110cdec3406!2sDipti%20Agro%20Tech%20Private%20Limited!5e0!3m2!1sen!2sin!4v1652886358597!5m2!1sen!2sin" style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                <form action="/contact/" method="post" class="info"> {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Your Name</label>
+                            <input required type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
+                                data-msg="Please enter your name" />
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="name">Your Email</label>
+                            <input required type="email" class="form-control" name="email" id="email" data-rule="email"
+                                data-msg="Please enter a valid email" />
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Subject</label>
+                        <input required type="text" class="form-control" name="subject" id="subject"
+                            data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Message</label>
+                        <textarea required class="form-control" name="message" rows="10" data-rule="required"
+                            data-msg="Please write something for me"></textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Contact Section -->
+
+
+{% endblock %}

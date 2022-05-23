@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="{% static 'logo.png' %}" type="">
+    <title>Dipti Agrotech</title>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <!-- font awesome style -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% block style %} {% endblock %}
+
+    <style>
+        @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+        #social {
+            margin: 20px 10px;
+            text-align: center;
+        }
+
+        .header_section{
+            padding: 10px 0;
+            background: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0)), url("{% static 'header.png' %}");
+        }
+
+        .smGlobalBtn {
+            /* global button class */
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ddd;
+            /* add border to the buttons */
+            box-shadow: 0 3px 3px #999;
+            padding: 0px;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            font-weight: normal;
+            line-height: 2em;
+            border-radius: 27px;
+            -moz-border-radius: 27px;
+            -webkit-border-radius: 27px;
+        }
+
+        /* facebook button class*/
+        .facebookBtn {
+            background: #4060A5;
+        }
+
+        .facebookBtn:before {
+            /* use :before to add the relevant icons */
+            font-family: "FontAwesome";
+            content: "\f09a";
+            /* add facebook icon */
+        }
+
+        .facebookBtn:hover {
+            color: #4060A5;
+            background: #fff;
+            border-color: #4060A5;
+            /* change the border color on mouse hover */
+        }
+
+        /* twitter button class*/
+        .twitterBtn {
+            background: #00ABE3;
+        }
+
+        .twitterBtn:before {
+            font-family: "FontAwesome";
+            content: "\f099";
+            /* add twitter icon */
+
+        }
+
+        .twitterBtn:hover {
+            color: #00ABE3;
+            background: #fff;
+            border-color: #00ABE3;
+        }
+
+        /* google plus button class*/
+        .googleplusBtn {
+            background: #e64522;
+        }
+
+        .googleplusBtn:before {
+            font-family: "FontAwesome";
+            content: "\f0d5";
+            /* add googleplus icon */
+        }
+
+        .googleplusBtn:hover {
+            color: #e64522;
+            background: #fff;
+            border-color: #e64522;
+        }
+
+        /* linkedin button class*/
+        .linkedinBtn {
+            background: #0094BC;
+        }
+
+        .linkedinBtn:before {
+            font-family: "FontAwesome";
+            content: "\f0e1";
+            /* add linkedin icon */
+        }
+
+        .linkedinBtn:hover {
+            color: #0094BC;
+            background: #fff;
+            border-color: #0094BC;
+        }
+
+        /* pinterest button class*/
+        .pinterestBtn {
+            background: #cb2027;
+        }
+
+        .pinterestBtn:before {
+            font-family: "FontAwesome";
+            content: "\f0d2";
+            /* add pinterest icon */
+        }
+
+        .pinterestBtn:hover {
+            color: #cb2027;
+            background: #fff;
+            border-color: #cb2027;
+        }
+
+        /* tumblr button class*/
+        .tumblrBtn {
+            background: #3a5876;
+        }
+
+        .tumblrBtn:before {
+            font-family: "FontAwesome";
+            content: "\f173";
+            /* add tumblr icon */
+        }
+
+        .tumblrBtn:hover {
+            color: #3a5876;
+            background: #fff;
+            border-color: #3a5876;
+        }
+
+        /* rss button class*/
+        .rssBtn {
+            background: #e88845;
+        }
+
+        .rssBtn:before {
+            font-family: "FontAwesome";
+            content: "\f09e";
+            /* add rss icon */
+        }
+
+        .rssBtn:hover {
+            color: #e88845;
+            background: #fff;
+            border-color: #e88845;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: -10px;
+        }
+
+        .social-buttons__button {
+            margin: 10px 5px 0;
+        }
+
+        .social-button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            width: 70px;
+            height: 70px;
+            text-decoration: none;
+            border-radius: 100%;
+            background: #fff;
+            text-align: center;
+        }
+
+        .social-button::after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            display: block;
+            width: 0;
+            height: 0;
+            border-radius: 100%;
+            transition: 0.3s;
+        }
+
+        .social-button:focus,
+        .social-button:hover {
+            color: #fff;
+        }
+
+        .social-button:focus::after,
+        .social-button:hover::after {
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            margin-left: calc(-50% - 1px);
+        }
+
+        .social-button i,
+        .social-button svg {
+            position: relative;
+            z-index: 1;
+            transition: 0.3s;
+        }
+
+        .social-button i {
+            font-size: 28px;
+        }
+
+        .social-button svg {
+            height: 40%;
+            width: 40%;
+        }
+
+        .social-button--mail {
+            color: #ce201f;
+        }
+
+        .social-button--mail::after {
+            background: #ce201f;
+        }
+
+        .social-button--facebook {
+            color: #3b5999;
+        }
+
+        .social-button--facebook::after {
+            background: #3b5999;
+        }
+
+        .social-button--instagram {
+            color: #e4405f;
+        }
+
+        .social-button--instagram::after {
+            background: #e4405f;
+        }
+
+        .social-button--youtube {
+            color: #ff0000;
+        }
+
+        .social-button--youtube::after {
+            background: #ff0000;
+        }
+
+        .social-button--whatsapp {
+            color: #249f16;
+        }
+
+        .social-button--whatsapp::after {
+            background: #249f16;
+        }
+
+        .badge {
+  position: relative;
+  margin: 1.5em 3em;
+  width: 4em;
+  height: 6.2em;
+  border-radius: 10px;
+  display: inline-block;
+  top: 0;
+  transition: all 0.2s ease;
+}
+.badge:before, .badge:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.badge:before {
+  transform: rotate(60deg);
+}
+.badge:after {
+  transform: rotate(-60deg);
+}
+.badge:hover {
+  top: -4px;
+}
+.badge .circle {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background: #fff;
+  z-index: 10;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.badge .circle i.fa {
+  font-size: 2em;
+  margin-top: 8px;
+}
+.badge .font {
+  display: inline-block;
+  margin-top: 1em;
+}
+.badge .ribbon {
+  position: absolute;
+  border-radius: 4px;
+  padding: 5px 5px 4px;
+  width: 100px;
+  z-index: 11;
+  color: #fff;
+  bottom: 12px;
+  left: 50%;
+  margin-left: -55px;
+  height: 15px;
+  font-size: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  background: linear-gradient(to bottom right, #555 0%, #333 100%);
+  cursor: default;
+}
+
+.gold {
+  background: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
+  color: #b7892b;
+}
+
+.foot{
+    padding: 40px 0 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0),#2424248f), url("{% static 'foot2.jpg' %}");
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="/home"><img width="150" src="{% static 'logo.png' %}" alt="#" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""> </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav" style="font-size: 16px;">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home">Home <span class="sr-only"></span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/product">Product</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+
+                            {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout/"><i class="fa fa-user" aria-hidden="true"
+                                        style="padding-right: 8px;"></i>LogOut ({{request.user}})</a>
+                            </li>
+
+                            {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="/signup"><i class="fa fa-user" aria-hidden="true"
+                                        style="padding-right: 8px;"></i>LogIn</a>
+                            </li>
+                            {% endif %}
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/detail">Details</a>
+                            </li>
+
+                            <!-- <li class="nav-item">
+                                <div class="badge gold">
+                                    <div class="circle"> <i class="fa fa-info-circle"></i></div>
+                                    <div class="ribbon">Details</div>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        {% block body %} {% endblock %}
+
+
+        <!-- footer start -->
+        <footer class="foot">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="full">
+                            <div class="logo_footer">
+                                <a href="#"><img width="210" src="{% static 'logo1.png' %}" alt="#" /></a>
+                            </div>
+                            <div class="information_f" style="font-size: 16px;">
+                                <p><span style="padding: 5px;"><img width="24" src="{% static 'mapicon.png' %}"
+                                            alt="#" /></span><strong style="color: #02cb02;">ADDRESS:</strong> <span style="color: white"> Natagarh Main Road, Bhombholare
+                                    more, Sodepur, Kolkata-700113, West Bengal, India</span></p>
+                                <p><span style="padding: 5px;"><img width="24" src="{% static 'phoneicon.png' %}"
+                                            alt="#" /></span><strong style="color: #02cb02;">TELEPHONE:</strong> <span style="color: white"> +91 8777461794</span></p>
+                                <p><span style="padding: 5px;"><img width="24" src="{% static 'mailicon.png' %}"
+                                            alt="#" /></span><strong style="color: #02cb02;">EMAIL:</strong> <span style="color: white"> diptiagrotech@gmail.com</span></p>
+                            </div>
+                        </div>
+                    </div> <br> <br>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="widget_menu">
+                                            <h3 style="color: #02cb02;">Menu</h3>
+                                            <ul>
+                                                <li><a href="/home" style="color: white">Home</a></li>
+                                                <li><a href="/about" style="color: white">About</a></li>
+                                                <li><a href="/product" style="color: white">Product</a></li>
+
+                                                <li><a href="/contact" style="color: white">Contact</a></li>
+                                                <li><a href="/signup" style="color: white">Login</a></li>
+                                                <li><a href="/detail" style="color: white">Company Details</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> <br> <br>
+                            <div class="col-md-5 footer-col">
+                                <div class="footer_detail">
+                                    <a href="/home" class="footer-logo">
+                                        <b style="font-size: 16px; color: #02cb02;">Dipti Agrotech</b>
+                                    </a><br>
+                                    <br>
+                                    <p style="font-size: 16px; color: white;">
+                                        We are committed to help farmers of India by providing reasonable product at
+                                        reasonable rate by using state of the art manufacturing system.
+                                    </p>
+                                    <div class="social-buttons">
+                                        <a href="https://www.facebook.com/diptiagro/" class="social-buttons__button social-button social-button--facebook"
+                                            aria-label="Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="social-buttons__button social-button social-button--instagram"
+                                            aria-label="instagram">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="mailto:diptiagrotech@gmail.com" class="social-buttons__button social-button social-button--mail"
+                                            aria-label="SnapChat">
+                                            <i class="fab fa-google-plus-g"></i>
+                                        </a>
+                                        <a href="#" class="social-buttons__button social-button social-button--youtube"
+                                            aria-label="GitHub">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                        <a href="https://api.whatsapp.com/send?phone=918777461794" class="social-buttons__button social-button social-button--whatsapp"
+                                            aria-label="CodePen">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <div class="cpy_">
+            <p class="mx-auto">© 2022 All Rights Reserved By <a href="https://rajarshi99.herokuapp.com/">NewGen Tech
+                    Pvt.
+                    Ltd.</a><br>
+
+                Created By <a href="https://rajarshi99.herokuapp.com/" target="_blank">Rajarshi</a> & Arijit
+
+            </p>
+        </div>
+
+
+        <script src="https://kit.fontawesome.com/45f2bf1db0.js" crossorigin="anonymous"></script>
+        <!-- jQery -->
+        <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <!-- popper js -->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <!-- bootstrap js -->
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <!-- custom js -->
+        <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

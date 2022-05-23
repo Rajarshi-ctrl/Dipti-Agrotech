@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block style %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root{
+  --pink:#FF046F;
+  --violet:#bed310;
+}
+
+*::selection{
+  background:var(--pink);
+  color:#fff;
+} 
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.home{
+  min-height: 100vh;
+  background: linear-gradient(rgb(161 155 255 / 0%),#00084000), url("{% static 'about1.jpg' %}") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  overflow:hidden;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+.home .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  text-align: center;
+}
+
+.home .content h1{
+  font-size: 5rem;
+  color: #fff;
+  padding:0 1rem;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  text-transform: uppercase;
+}
+
+.home .content p{
+  font-size: 2rem;
+  color:#eee;
+  padding:1rem 25rem;
+}
+
+.home .content button{
+  height:4rem;
+  width:20rem;
+  border-radius: 5rem;
+  background:var(--pink);
+  color:#fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .2s;
+  border:none;
+  box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
+}
+
+.home .content button:hover{
+  letter-spacing: .2rem;
+}
+
+.home .box-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home .box-container .box{
+  height:20rem;
+  width:25rem;
+  background:#fff;
+  opacity: 0.8;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.home .box-container .box i{
+  height:6rem;
+  width:6rem;
+  line-height: 6rem;
+  text-align: center;
+  border-radius: 50%;
+  color:#fff;
+  background:var(--violet);
+  font-size: 3rem;
+  margin:2rem 0;
+  transition: .2s;
+}
+
+.home .box-container .box h3{
+  font-size: 2rem;
+  color:var(--pink);
+  transition: .2s;
+}
+
+.home .box-container .box p{
+  font-size: 1.3rem;
+  padding:.7rem 2rem;
+  color:#666;
+}
+
+.home .box-container .box:hover i{
+  background:var(--pink);
+}
+
+.home .box-container .box:hover h3{
+  color:var(--violet);
+}
+
+.home::before{
+  content: '';
+  position: absolute;
+  bottom:-25rem; left:50%;
+  transform: translateX(-50%);
+  border-top: 70vh solid #fff;
+  width:120%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media (max-width:768px){
+
+.home .content p{
+  padding:1.5rem 2rem;
+}
+
+.home::before{
+  display: none;
+}
+}
+
+</style>
+{% endblock %}
+
+
+{% block body %}
+
+<section class="home" id="home">
+
+  <div class="content">
+    <h1 style="font-family: 'Times New Roman';">Dipti Agrotech</h1>
+    <p style="font-family: 'Times New Roman';">Let's Heal Nature with Proper Nourishment</p>
+    <a href="/detail"><button>Discover More</button></a>
+  </div>
+
+  <div class="box-container">
+
+    <div class="box">
+      <i class="fa-solid fa-heart-circle-check"></i>
+      <h3>HONESTY</h3>
+      <p>We strongly believe that "HONESTY is the best policy for long term business”.</p>
+    </div>
+
+    <div class="box">
+      <i class="fa-solid fa-hand-holding-hand"></i>
+      <h3>HUMANITY</h3>
+      <p>"The best way to find yourself is to lose yourself in the service of others" - Mahatma Gandhi.</p>
+    </div>
+
+    <div class="box">
+      <i class="far fa-handshake"></i>
+      <h3>RELATION</h3>
+      <p>"We strongly believe that we are in this world for the sake of other human being"</p>
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock %}
